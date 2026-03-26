@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 20% 92%;
+
+    --card: 222 41% 10%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 222 41% 10%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 40 90% 55%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 222 30% 16%;
+    --secondary-foreground: 210 20% 85%;
+
+    --muted: 222 25% 14%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 40 70% 45%;
+    --accent-foreground: 222 47% 6%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 210 20% 98%;
+
+    --income: 152 60% 48%;
+    --income-foreground: 152 60% 10%;
+    --expense: 0 72% 60%;
+    --expense-foreground: 0 72% 10%;
+
+    --border: 222 25% 18%;
+    --input: 222 25% 18%;
+    --ring: 40 90% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 222 41% 8%;
+    --sidebar-foreground: 210 20% 85%;
+    --sidebar-primary: 40 90% 55%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 30% 14%;
+    --sidebar-accent-foreground: 210 20% 85%;
+    --sidebar-border: 222 25% 18%;
+    --sidebar-ring: 40 90% 55%;
+
+    --chart-income: 152 60% 48%;
+    --chart-expense: 0 72% 60%;
+    --chart-line: 40 90% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50 rounded-xl shadow-lg;
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 30px -5px hsl(40 90% 55% / 0.15);
+  }
+
+  .premium-gradient {
+    background: linear-gradient(135deg, hsl(40 90% 55%) 0%, hsl(30 85% 50%) 100%);
+  }
+
+  .income-badge {
+    @apply bg-income/15 text-income border border-income/20;
+  }
+
+  .expense-badge {
+    @apply bg-expense/15 text-expense border border-expense/20;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(222 41% 8%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(222 25% 22%);
+  border-radius: 3px;
+}
