@@ -1,73 +1,136 @@
-# Welcome to your Lovable project
+# Expense Tracker Web Application
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The Expense Tracker is a web-based application designed to help users manage and monitor their personal expenses and income in an organized way.
 
-## How can I edit this code?
+The application allows users to record financial transactions, categorize expenses, view monthly spending patterns, and analyze their financial activity through interactive charts. It also provides features for setting budgets and generating reports.
 
-There are several ways of editing your application.
+## Main Features
 
-**Use Lovable**
+- Add and manage income and expenses
+- Categorize transactions
+- View total income, expenses, and balance
+- Analyze expenses category-wise
+- View monthly expense statistics
+- Interactive charts and visual analytics
+- Set and monitor budget limits
+- Generate and download expense reports
+- User authentication and account management
+- Store financial data securely in the database
+- Responsive interface for different screen sizes
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Technologies Used
 
-Changes made via Lovable will be committed automatically to this repo.
+The project is developed using the following technologies:
 
-**Use your preferred IDE**
+- **Frontend:** React, TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** shadcn/ui
+- **Build Tool:** Vite
+- **Database:** Supabase
+- **Charts:** Chart.js
+- **Backend/API:** Node.js
+- **Development Environment:** Visual Studio Code
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The project is organized into separate components and modules to make the application easier to maintain and modify.
 
-Follow these steps:
+```text
+src/
+├── components/      # Reusable interface components
+├── pages/            # Application pages
+├── hooks/            # Custom React hooks
+├── services/         # Data and API-related functions
+├── lib/              # Utility functions and configuration
+├── assets/           # Images and other static resources
+└── main.tsx          # Application entry point
+```
+
+## Installation and Setup
+
+### 1. Install Node.js
+
+Make sure Node.js and npm are installed on your computer.
+
+You can verify the installation using:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+node -v
+npm -v
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 2. Install Project Dependencies
 
-# Step 3: Install the necessary dependencies.
-npm i
+Open the project folder in a terminal and run:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```sh
+npm install
+```
+
+This installs the packages required to run the application.
+
+### 3. Start the Development Server
+
+Run:
+
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The development server will start and provide a local URL that can be opened in a web browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Database Configuration
 
-**Use GitHub Codespaces**
+The application uses Supabase for storing user and financial data.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The required database configuration should be added through environment variables rather than directly inside the source code.
 
-## What technologies are used for this project?
+Example:
 
-This project is built with:
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Do not share private keys or sensitive credentials publicly.
 
-## How can I deploy this project?
+## How the Application Works
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+1. The user signs in to the application.
+2. Income and expense transactions can be added.
+3. Each transaction can be assigned to an appropriate category.
+4. The application calculates the user's financial summary.
+5. Transaction data is displayed using tables and charts.
+6. Monthly and category-wise spending can be analyzed.
+7. Users can set budget limits and monitor their spending.
+8. Reports can be generated from the stored transaction data.
 
-## Can I connect a custom domain to my Lovable project?
+## Purpose of the Project
 
-Yes, you can!
+The main purpose of this project is to provide a simple and practical solution for managing personal finances digitally.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+It demonstrates the use of modern web-development technologies, database integration, authentication, data visualization, and responsive user-interface design in a single application.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Running the Project
+
+After completing the setup, use:
+
+```sh
+npm run dev
+```
+
+Then open the local development address displayed in the terminal.
+
+## Future Improvements
+
+Possible future improvements include:
+
+- Mobile application support
+- Advanced financial statistics
+- Recurring transactions
+- Automatic expense reminders
+- Exporting reports in multiple formats
+- Improved security and authentication
+- Integration with external financial services
